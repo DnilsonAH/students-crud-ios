@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var students: [Student] = []
+    //@State private var mostrarVistaAsistencia = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView{
+            VStack{
+                List{
+                    ForEach(students) { student in
+                        /*
+                         NavigationLink(destination: VistaEditarAsistencia)
+                         */
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
